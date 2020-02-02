@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'twfcjc^c5s)gj63-k&8ba8onm!klj)dze$r0u&_$n*um_3y6n3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False #True para aparecer mensagens no browser. Para entrega Modo debug false o runserver ja nem roda.
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*'] #[], qual hosts estão habilitados '*' todos e um erro mais amigavel.
 
 
 # Application definition
@@ -104,15 +104,15 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'pt-br' #'en-us' para brasil
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo' #'UTC' 'Americas/Sao_Paulo' não funcionou
 
 USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False #True
 
 
 # Static files (CSS, JavaScript, Images)
