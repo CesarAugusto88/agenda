@@ -5,3 +5,4 @@ ee the name for you IDE
 # Name of your virtuan env
 .ag_env
 *pyc
+.env
