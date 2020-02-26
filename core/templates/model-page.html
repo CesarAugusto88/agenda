@@ -1,10 +1,18 @@
 <!DOCTYPE html>
+{% load static %}
+
 <html lang="en">
 <head>
     {% include "model-header.html" %}
 </head>
 <body>
+    <!-- Não aparece imagem:
+        <img src="../images/date.png" alt="datas"> 
+    -->
     {% block content %} {% endblock %}
+    
     {% include "model-footer.html" %}
+
+    <script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script> <!--Final do body-->
 </body>
 </html>
