@@ -25,15 +25,15 @@ def submit_login(request):
         if usuario is not None:
             login(request, usuario)
             return redirect('/')
-        else:
-            messages.error(request, "Usuário ou senha inválida.")
+        
+        messages.error(request, "Usuário ou senha inválida.")
     
     return redirect('/')
 
 @login_required(login_url='/login/')
 def lista_eventos(request):
     usuario = request.user
-    data_atual = datetime.now() - timedelta(days=60) #para retornar com vencidos há 1h
+    data_atual = datetime.now() - timedelta(days=180) #para retornar com vencidos há 1h
     evento =  Evento.objects.filter(usuario=usuario,
                                     data_evento__gt=data_atual)#__gt só Maior, __lt só Menor
     dados = {'eventos':evento}
@@ -64,10 +64,7 @@ def submit_evento(request):
                 evento.data_evento = data_evento
                 evento.local_evento = local_evento
                 evento.save()
-            #Evento.objects.filter(id=id_evento).update(titulo=titulo,
-             #                                          data_evento=data_evento,
-              #                                         descricao=descricao,
-               #                                        local_evento=local_evento)
+            #Evento.objects.filter(id=id_evento).update(titulo=titulo, data_evento=data_evento, descricao=descricao, local_evento=local_evento)
         else:
             Evento.objects.create(titulo=titulo,
                                 data_evento=data_evento,
