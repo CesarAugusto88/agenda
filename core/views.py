@@ -33,7 +33,7 @@ def submit_login(request):
 @login_required(login_url='/login/')
 def lista_eventos(request):
     usuario = request.user
-    data_atual = datetime.now() - timedelta(hours=1) #para retornar com vencidos há 1h
+    data_atual = datetime.now() - timedelta(days=60) #para retornar com vencidos há 1h
     evento =  Evento.objects.filter(usuario=usuario,
                                     data_evento__gt=data_atual)#__gt só Maior, __lt só Menor
     dados = {'eventos':evento}
