@@ -11,7 +11,7 @@
             <div {% if evento.get_evento_atrasado%}
                     style="color:red"
                  {% elif evento.get_evento_proximo %}
-                    style="color:blue"
+                    style="color:#DF9808"
                  {% endif %}>
               {{ evento.titulo  }} - {{  evento.get_data_evento }} 
                 <a href="evento/?id={{ evento.id }}" style="text-decoration:none">
