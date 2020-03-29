@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('agenda/', views.lista_eventos),
     #path('agenda/lista/', views.json_lista_evento),
+    # testar no html o caminho lista/<int:id_usuario>/ no editar e ver a video aula
     path('agenda/lista/<int:id_usuario>/', views.json_lista_evento),
     path('agenda/evento/', views.evento),
     path('agenda/evento/submit', views.submit_evento),

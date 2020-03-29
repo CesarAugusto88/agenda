@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['agenda-agendamentos.herokuapp.com', '*'] #['*'], qual hosts estão habilitados '*' todos e um erro mais amigavel.
+ALLOWED_HOSTS = ['agenda-agendamentos.herokuapp.com', '127.0.0.1'] #['*'], qual hosts estão habilitados '*' todos e um erro mais amigavel.
 
 
 # Application definition
