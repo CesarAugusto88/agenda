@@ -1,8 +1,6 @@
-ee the name for you IDE
 .idea
-# If you are using sqlite3
+*.vscode
 *.sqlite3
-# Name of your virtuan env
-.ag_env
-*pyc
+.venv
+*.pyc
 .env

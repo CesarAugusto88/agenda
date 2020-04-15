@@ -1,5 +1,7 @@
 {% extends "base.html" %}
-
+{% block header %}
+{% include 'includes/header-logout.html' with titulo='Agenda' descricao='Edite seu evento.' %}
+{% endblock header %}
 {% block conteudo %}
 
 <h2>Evento</h2>

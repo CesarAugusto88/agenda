@@ -32,7 +32,7 @@ urlpatterns = [
     path('', RedirectView.as_view(url='/agenda/')),
     path('login/', views.login_user, name='login'),
     path('login/submit', views.submit_login),
-    path('logout/', views.logout_user),
+    path('logout/', views.logout_user, name='logout_user'),
 
     # Novo template bootstrap
     path('home', views.index, name='home'),
