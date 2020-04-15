@@ -96,13 +96,14 @@ def json_lista_evento(request, id_usuario):
 
 
 def index(request):
+    # modelo de outro projeto
     nome_da_empresa = "Agendamentos"
-    descricao_da_empresa = "Há mais de 12 anos formando desenvolvedores de ponta! São mais de 4.000 horas de conteúdo, com formações completas e com foco no mercado de trabalho."
+    descricao_da_empresa = "Desenvolve páginas web de agenda."
 
     contato_empresa = {
-        "endereco": "Av. Paulista, 1765, Conj 71 e 72 - Bela Vista - São Paulo - SP",
-        "telefone": "111222333",
-        "email": "contato@treinaweb.com.br"
+        "endereco": "Campos do Jordão - SP",
+        "telefone": "12997865680",
+        "email": "c-costa-@outlook.com.br"
     }
 
     cursos_home = {
