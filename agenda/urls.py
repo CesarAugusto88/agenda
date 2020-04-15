@@ -30,7 +30,13 @@ urlpatterns = [
     path('agenda/evento/delete/<int:id_evento>/', views.delete_evento),
     #path('', views.index), #com a função em views
     path('', RedirectView.as_view(url='/agenda/')),
-    path('login/', views.login_user),
+    path('login/', views.login_user, name='login'),
     path('login/submit', views.submit_login),
-    path('logout/', views.logout_user)
+    path('logout/', views.logout_user),
+
+    # Novo template bootstrap
+    path('home', views.index, name='home'),
+    path('contact', views.contact, name='contact'),
+    path('about', views.about, name='about'),
+    path('services', views.services, name='services'),
 ]

@@ -1,6 +1,10 @@
-{% extends "model-page.html" %}
+{% extends "base.html" %}
+{% block header %}
+{% include 'includes/header.html' with titulo='Sua Agenda' descricao='Crie seus eventos com descrição, data e local.' %}
+{% endblock header %}
 
-{% block content %}
+{% block conteudo %}
+
     <h2><font color="DarkOliveGreen	">Agendamentos</font></h2>  
     <a href="evento/">
       <button type="button">Novo Evento</button>
@@ -26,4 +30,4 @@
           <br>
         {% endfor %}
     </ul>
-{% endblock%}
+{% endblock %}
